@@ -25,6 +25,7 @@ jobs:
     - name: tree1
       run: tree
     - name: cdinfolder
+      working-directory: ./TryVueInVS
       run: npm install
     - name: Install dependencies
       run: npm install

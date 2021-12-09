@@ -13,22 +13,24 @@ jobs:
   deploy-to-github-page:
     # use ubunto-latest image to run steps on
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [16.x]
-
     steps:
-    - uses: actions/checkout@v2
-    
     - uses: actions/checkout@v2
     - name: Use Node.js
       uses: actions/setup-node@v2
       with:
         node-version: '16.x'
-    - name: Install dependencies
+    
+    - name: ls1
+      run: pwd
+    - name: tree1
+      run: tree
+    - name: install package
+      working-directory: ./TryVueInVS
       run: npm install
-    - run: npm run build
-    - name: LS
+    - name: build
+      working-directory: ./TryVueInVS
+      run: npm run build
+    - name: tree
       run: tree
         
     
@@ -49,7 +51,6 @@ jobs:
       with:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
         BRANCH: display
-        FOLDER: dist
+        FOLDER: TryVueInVS/dist
         clean-exclude: |
           appsettings.json
-    #      www2/appsettings.json

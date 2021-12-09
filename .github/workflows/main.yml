@@ -13,10 +13,6 @@ jobs:
   deploy-to-github-page:
     # use ubunto-latest image to run steps on
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [16.x]
-
     steps:
     - uses: actions/checkout@v2
     
@@ -25,8 +21,8 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: '16.x'
-    - name: LS1
-      run: ls
+    - name: cdinfolder
+      run: cd TryvalueInVs
     - name: Install dependencies
       run: npm install
     - run: npm run build

@@ -22,6 +22,8 @@ jobs:
     
     - name: ls1
       run: pwd
+    - name: tree1
+      run: tree
     - name: cdinfolder
       run: npm install
     - name: Install dependencies

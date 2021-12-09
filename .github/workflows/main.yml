@@ -24,13 +24,13 @@ jobs:
       run: pwd
     - name: tree1
       run: tree
-    - name: cdinfolder
+    - name: install package
       working-directory: ./TryVueInVS
       run: npm install
     - name: build
       working-directory: ./TryVueInVS
       run: npm run build
-    - name: LS
+    - name: tree
       run: tree
         
     
@@ -51,7 +51,6 @@ jobs:
       with:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
         BRANCH: display
-        FOLDER: dist
+        FOLDER: TryVueInVS/dist
         clean-exclude: |
           appsettings.json
-    #      www2/appsettings.json

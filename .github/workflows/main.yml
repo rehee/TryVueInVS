@@ -24,8 +24,8 @@ jobs:
     - name: ls1
       run: ls
     - name: cdinfolder
-      working-directory: /TryValueInVS
-      run: ls
+      working-directory: ./TryValueInVS
+      run: npm install
     - name: Install dependencies
       run: npm install
     - run: npm run build

@@ -8,4 +8,6 @@ export class HttpFunc {
       console.log(r);
     });
   }
+
+  
 }

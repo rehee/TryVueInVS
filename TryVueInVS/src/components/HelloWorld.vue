@@ -447,7 +447,7 @@
     },
     mounted: function () {
       console.log('home log');
-      window['RevolutionSlider'](2);
+      (window as any)['RevolutionSlider'](2);
     }
   });
 </script>

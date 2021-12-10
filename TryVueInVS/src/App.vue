@@ -206,7 +206,7 @@
     mounted: function () {
       console.log('main log');
       HttpFunc.get();
-      window['SetUpScroll']();
+      (window as any)['SetUpScroll']();
     }
   });
 </script>

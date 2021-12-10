@@ -6,7 +6,7 @@
         <div class="banner">
           <ul>
             <!-- Slide 1 -->
-            <li data-transition="fade" data-slotamount="7" data-masterspeed="1500">
+            <li data-transition="fade" class="banner_item" data-slotamount="7" data-masterspeed="1500">
               <!-- Main Image -->
               <img src="images/slides/1700x449.gif" style="opacity:0;" alt="slidebg1" data-bgfit="cover" data-bgposition="left bottom" data-bgrepeat="no-repeat">
               <!-- Layers -->
@@ -39,7 +39,7 @@
               </div>
             </li>
             <!-- Slide 2 -->
-            <li data-transition="boxfade" data-slotamount="7" data-masterspeed="1000">
+            <li data-transition="boxfade" class="banner_item" data-slotamount="7" data-masterspeed="1000">
               <!-- Main Image -->
               <img src="images/slides/1700x449.gif" alt="darkblurbg" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
               <!-- Layers -->
@@ -445,6 +445,10 @@
     props: {
       msg: String,
     },
+    mounted: function () {
+      console.log('home log');
+      window['RevolutionSlider'](2);
+    }
   });
 </script>
 

@@ -36,12 +36,14 @@
   <script type="text/javascript" src="/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
   <script type="text/javascript" src="/js/custom.js"></script>
 </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-    <script>navigator.serviceWorker.register('service-worker.published.js');</script>
-  </body>
+<body>
+  <noscript>
+    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+  </noscript>
+  <div id="app"></div>
+  <!-- Go-top Button -->
+  <div id="go-top"><i class="fa fa-angle-up fa-2x"></i></div>
+  <!-- built files will be auto injected -->
+  <script>navigator.serviceWorker.register('service-worker.published.js');</script>
+</body>
 </html>

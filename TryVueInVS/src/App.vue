@@ -189,8 +189,7 @@
       </div>
     </footer>
 
-    <!-- Go-top Button -->
-    <div id="go-top"><i class="fa fa-angle-up fa-2x"></i></div>
+    
   </div>
 </template>
 
@@ -202,6 +201,10 @@ export default Vue.extend({
   name: 'App',
   components: {
     HelloWorld
+  },
+  mounted: function () {
+    console.log('main log');
+    window['SetUpScroll']();
   }
 });
 </script>

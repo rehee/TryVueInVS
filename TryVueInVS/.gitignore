@@ -4,7 +4,8 @@ node_modules
 
 /src/**/*.js
 /src/**/*.map
-
+/src/funcs/*.js
+/src/funcs/*.map
 # local env files
 .env.local
 .env.*.local

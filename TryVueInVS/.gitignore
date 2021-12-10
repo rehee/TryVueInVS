@@ -2,10 +2,8 @@
 node_modules
 /dist
 
-/src/*/*.js
-/src/*/*.map
-/src/funcs/*.js
-/src/funcs/*.map
+/src/**/*.js
+/src/**/*.map
 # local env files
 .env.local
 .env.*.local

@@ -7,17 +7,22 @@ import { IPropertyDTO } from "../Dtos/PropertyDTO";
 
 
 export class HttpFunc {
-  public static async Get<T>(url: string, isLocal: boolean = false): Promise<T> {
+  public static async Get<T>(url: string, isLocal: boolean = false): Promise<T | null> {
     let config = null;
     if (!isLocal) {
       config = await HttpFunc.GetWebConfig();
     }
     const urls = `${url}`;
-    const value = await axios.get<T>(urls,
-      {
-        baseURL: (isLocal ? undefined : config?.ApiBaseUrl)
-      });
-    return value.data;
+    try {
+      const value = await axios.get<T>(urls,
+        {
+          baseURL: (isLocal ? undefined : config?.ApiBaseUrl)
+        });
+      return value.data;
+    } catch {
+      return null;
+    }
+
   }
 
   public static async GetWebConfig(reset: boolean = false): Promise<ISiteConfig | null> {

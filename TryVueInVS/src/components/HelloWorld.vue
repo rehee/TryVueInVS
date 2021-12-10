@@ -449,7 +449,8 @@ import { HttpFunc } from '../funcs/HttpService';
     },
     mounted: async function () {
       console.log('home log');
-      const banner = await HttpFunc.Get<IPropertyDTO[]>('Property/Type/1');
+      const banner = await HttpFunc.Get<IPropertyDTO[]>('/Property/Type1/1');
+      
       console.log(banner);
       (window as any)['RevolutionSlider'](2);
     }

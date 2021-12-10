@@ -196,16 +196,17 @@
 <script lang="ts">
   import Vue from 'vue';
   import HelloWorld from './components/HelloWorld.vue';
-  import { HttpFunc } from './funcs/HttpService';
-
+  //import { HttpFunc } from './funcs/HttpService';
+  //import { ISiteConfig } from './Configurations/SiteConfig';
   export default Vue.extend({
     name: 'App',
     components: {
       HelloWorld
     },
-    mounted: function () {
-      console.log('main log');
-      HttpFunc.get();
+    mounted: async function () {
+      console.log('main log',this);
+      //let config = await HttpFunc.Get<ISiteConfig>("appsettings.json", true);
+      //console.log(config);
       (window as any)['SetUpScroll']();
     }
   });

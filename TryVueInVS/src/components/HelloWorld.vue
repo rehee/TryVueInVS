@@ -439,14 +439,18 @@
 
 <script lang="ts">
   import Vue from 'vue';
+import { IPropertyDTO } from '../Dtos/PropertyDTO';
+import { HttpFunc } from '../funcs/HttpService';
 
   export default Vue.extend({
     name: 'HelloWorld',
     props: {
       msg: String,
     },
-    mounted: function () {
+    mounted: async function () {
       console.log('home log');
+      const banner = await HttpFunc.Get<IPropertyDTO[]>('Property/Type/1');
+      console.log(banner);
       (window as any)['RevolutionSlider'](2);
     }
   });

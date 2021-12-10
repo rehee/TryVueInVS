@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.VisualStudio.JavaScript.Sdk/0.4.0-alpha">
+﻿<Project Sdk="Microsoft.VisualStudio.JavaScript.Sdk/0.4.0-alpha">
   <PropertyGroup Label="Globals">
     <ProjectGuid>9851a4f1-fae1-452b-8a44-4c1d2f8b300c</ProjectGuid>
   </PropertyGroup>
@@ -8,8 +8,9 @@
     <JavaScriptTestFramework>Jest</JavaScriptTestFramework>
   </PropertyGroup>
   <ItemGroup>
-    <Script Include="**" Exclude="*.esproj;**\node_modules\**" />
+    <Script Include="**" Exclude="*.esproj;**\node_modules\**;**\src\**\*.js;**\src\**\*.map;" />
   </ItemGroup>
+  
   <ItemGroup>
     <Folder Include="src\funcs\" />
   </ItemGroup>

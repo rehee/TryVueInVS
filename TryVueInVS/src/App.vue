@@ -189,26 +189,27 @@
       </div>
     </footer>
 
-    
+
   </div>
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
+  import Vue from 'vue';
+  import HelloWorld from './components/HelloWorld.vue';
+  import { HttpFunc } from './funcs/HttpService';
 
-export default Vue.extend({
-  name: 'App',
-  components: {
-    HelloWorld
-  },
-  mounted: function () {
-    console.log('main log');
-    window['SetUpScroll']();
-  }
-});
+  export default Vue.extend({
+    name: 'App',
+    components: {
+      HelloWorld
+    },
+    mounted: function () {
+      console.log('main log');
+      HttpFunc.get();
+      window['SetUpScroll']();
+    }
+  });
 </script>
 
 <style>
-
 </style>

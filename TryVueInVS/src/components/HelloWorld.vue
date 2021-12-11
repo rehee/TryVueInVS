@@ -377,8 +377,7 @@
       Banner
     },
     mounted: async function () {
-      console.log('home log');
-
+      
     }
   });
 </script>

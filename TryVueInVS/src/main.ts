@@ -14,11 +14,8 @@ const vue = new MyVue({
   }
 });
 async function Init() {
-  console.log('before mount')
   const config = await HttpFunc.GetWebConfig(true);
   vue.$mount("#app");
-  //vue.SiteConfig = config;
-  console.log(vue);
 }
 Init();
 

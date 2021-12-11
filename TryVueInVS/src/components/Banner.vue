@@ -71,7 +71,6 @@
       if (this.banner) {
         (window as any)['RevolutionSlider'](this.banner.length);
       }
-
     }
   });
 </script>

@@ -204,9 +204,6 @@
       HelloWorld
     },
     mounted: async function () {
-      console.log('main log',this);
-      //let config = await HttpFunc.Get<ISiteConfig>("appsettings.json", true);
-      //console.log(config);
       (window as any)['SetUpScroll']();
     }
   });

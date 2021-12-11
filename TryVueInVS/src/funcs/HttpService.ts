@@ -39,5 +39,10 @@ export class HttpFunc {
     return value;
   }
 
+  public static async GetFile(fileUUID: string = "") {
+    const config = await HttpFunc.GetWebConfig();
+    return `${config?.ApiBaseUrl}File/uuid/${fileUUID}`;
+  }
+
 
 }
